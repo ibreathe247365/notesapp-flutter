@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'MyHomePage.dart';
 void main() {
   runApp(MyApp());
 }
@@ -19,6 +19,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
+//REDUNDANT CODE
+
+
+
+
 // class MyHomePage extends StatelessWidget {
 //   // This widget is the root of your application.
 //   @override
@@ -32,19 +39,6 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  String text = "";
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("hello"),),
-    body: Column(children: <Widget>[TextInputWidget(),Text(this.text)],),);
-  }
-}
 
 // class TextWidget extends StatelessWidget {
 //   @override
@@ -52,21 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //     return Text("Hello world!");
 //   }
 // }
-
-class TextInputWidget extends StatefulWidget {
-  @override
-  _TextInputWidgetState createState() => _TextInputWidgetState();
-}
-
-class _TextInputWidgetState extends State<TextInputWidget> {
-  final controller = TextEditingController();
-  // String text = "bla";
-
-  @override
-  void dispose() {
-    super.dispose();
-    controller.dispose();
-  }
 
 //   void changeText(text) {
 //     if (text == "Hello World!") {
@@ -89,19 +68,3 @@ class _TextInputWidgetState extends State<TextInputWidget> {
 //       Text(this.text)
 //     ]);
 //   }
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: this.controller,
-      decoration: InputDecoration(
-          prefixIcon: Icon(Icons.message),
-          labelText: "Type a message",
-          suffixIcon: IconButton(
-              icon: Icon(Icons.send),
-              splashColor: Colors.red,
-              tooltip: "Post message",
-              onPressed: null)),
-    );
-  }
-}
